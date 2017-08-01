@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiuUnit.UmbracoRestrictions.Web", "GiuUnit.UmbracoRestrictions.Web\GiuUnit.UmbracoRestrictions.Web.csproj", "{6D9A3EDB-B988-4DA3-8798-CF55C98E53E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiuUnit.UmbracoRestrictions.Core", "GiuUnit.UmbracoRestrictions.Core\GiuUnit.UmbracoRestrictions.Core.csproj", "{29A79494-ECDB-4A5A-94E6-BA3646BF2F53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D9A3EDB-B988-4DA3-8798-CF55C98E53E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D9A3EDB-B988-4DA3-8798-CF55C98E53E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D9A3EDB-B988-4DA3-8798-CF55C98E53E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D9A3EDB-B988-4DA3-8798-CF55C98E53E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A79494-ECDB-4A5A-94E6-BA3646BF2F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A79494-ECDB-4A5A-94E6-BA3646BF2F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A79494-ECDB-4A5A-94E6-BA3646BF2F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A79494-ECDB-4A5A-94E6-BA3646BF2F53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
