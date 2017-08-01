@@ -13,7 +13,7 @@ namespace GiuUnit.UmbracoRestrictions.Core
 
             var config = new RestrictionsConfig(configFilePath);
 
-            ContentService.Published += new RootSingletonDocumentRestriction(config.ConfigEntries).OnPublish;
+            ContentService.Publishing += new RootSingletonDocumentRestriction(config.ConfigEntries).OnPublish;
         }
     }
 }
