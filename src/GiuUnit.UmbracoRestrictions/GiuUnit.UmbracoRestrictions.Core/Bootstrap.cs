@@ -15,6 +15,8 @@ namespace GiuUnit.UmbracoRestrictions.Core
 
             ContentService.Publishing += new RootSingletonDocumentRestriction(config.ConfigEntries).OnPublish;
             ContentService.Publishing += new OnlyChildDocumentRestriction(config.ConfigEntries).OnPublish;
+
+            ContentService.UnPublishing += new LeastOnceDocumentRootRestriction(config.ConfigEntries).OnUnpublish;
         }
     }
 }

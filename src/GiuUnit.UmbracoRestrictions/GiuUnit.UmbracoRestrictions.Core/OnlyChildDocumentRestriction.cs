@@ -5,7 +5,7 @@ using Umbraco.Core.Publishing;
 
 namespace GiuUnit.UmbracoRestrictions.Core
 {
-    public class OnlyChildDocumentRestriction : IRestriction
+    public class OnlyChildDocumentRestriction : IPublishRestriction
     {
         private RestrictionsConfigRoot _config;
         private const string ruleName = "onlyChildDocument";

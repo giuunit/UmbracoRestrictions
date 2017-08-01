@@ -2,7 +2,7 @@
 
 namespace GiuUnit.UmbracoRestrictions.Core
 {
-    interface IRestriction
+    interface IPublishRestriction
     {
         void OnPublish(Umbraco.Core.Publishing.IPublishingStrategy sender, Umbraco.Core.Events.PublishEventArgs<IContent> e);
     }

@@ -1,21 +1,21 @@
-﻿using Umbraco.Core.Events;
+﻿using System.Linq;
+using Umbraco.Core.Events;
 using Umbraco.Core.Models;
 using Umbraco.Core.Publishing;
-using System.Linq;
 
 namespace GiuUnit.UmbracoRestrictions.Core
 {
-    public class RootSingletonDocumentRestriction : IPublishRestriction
+    public class LeastOnceDocumentRootRestriction : IUnpublishRestriction
     {
         private RestrictionsConfigRoot _config;
-        private const string ruleName = "rootSingletonDocument";
+        private const string ruleName = "leastOnceDocumentRoot";
 
-        public RootSingletonDocumentRestriction(RestrictionsConfigRoot config)
+        public LeastOnceDocumentRootRestriction(RestrictionsConfigRoot config)
         {
             _config = config;
         }
 
-        public void OnPublish(IPublishingStrategy sender, PublishEventArgs<IContent> e)
+        public void OnUnpublish(IPublishingStrategy sender, PublishEventArgs<IContent> e)
         {
             var rule = _config.RulesNode.RuleList.FirstOrDefault(x => x.Name == ruleName);
 
@@ -46,10 +46,10 @@ namespace GiuUnit.UmbracoRestrictions.Core
                     .ToList();
 
                 //any siblings with the same doc type ? 
-                var cachedDocumentsCondition = restrictedEntities.Any(x => siblingsAliases.Contains(x.ContentType.Alias));
+                var noOther = !restrictedEntities.Any(x => siblingsAliases.Contains(x.ContentType.Alias));
 
                 //documents with the restriction have been found
-                if (cachedDocumentsCondition)
+                if (noOther)
                 {
                     e.CancelOperation(new EventMessage("Content Restriction", rule.ErrorMessage, EventMessageType.Error));
                 }
