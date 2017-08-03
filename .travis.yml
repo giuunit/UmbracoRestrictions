@@ -1,2 +1,2 @@
 language: csharp
-solution: GiuUnit.UmbracoRestrictions.sln
+solution: src\GiuUnit.UmbracoRestrictions\GiuUnit.UmbracoRestrictions.sln
